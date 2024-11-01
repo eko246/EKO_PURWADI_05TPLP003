@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistem Informasi Manajemen Karyawan | Dashboard</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <style>
+        .navbar-custom {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            padding: 1rem 0;
+        }
+        
+        .stat-card {
+            border: none;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+        
+        .stat-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .bg-gradient-1 { background: linear-gradient(45deg, #FF6B6B, #FFE66D); }
+        .bg-gradient-2 { background: linear-gradient(45deg, #4E65FF, #92EFFD); }
+        .bg-gradient-3 { background: linear-gradient(45deg, #45B649, #DCE35B); }
+        
+        .quick-access {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+
+        .team-member {
+            text-align: center;
+            margin: 15px 0;
+        }
+
+        .team-member img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+
+        .footer {
+            background: #1e3c72;
+            color: white;
+            padding: 20px 0;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="fas fa-building me-2"></i>EKO PURWADI
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html"><i class="fas fa-home me-1"></i> Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pages/karyawan.html"><i class="fas fa-users me-1"></i> Data Karyawan</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pages/jabatan.html"><i class="fas fa-sitemap me-1"></i> Data Jabatan</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pages/divisi.html"><i class="fas fa-chart-pie me-1"></i> Data Divisi</a>
+                    </li>
+                </ul>
+                <div class="d-flex">
+                    <a href="#" class="btn btn-light"><i class="fas fa-user me-1"></i> Login</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container mt-4">
+        <!-- Welcome Banner -->
+        <div class="p-5 mb-4 bg-light rounded-3">
+            <div class="container-fluid py-5">
+                <h1 class="display-5 fw-bold">Selamat Datang di SIM Karyawan Eko Purwadi</h1>
+                <p class="col-md-8 fs-4">Sistem Informasi Manajemen Karyawan yang memudahkan pengelolaan data karyawan, jabatan, dan divisi perusahaan.</p>
+                <button class="btn btn-primary btn-lg" type="button">Pelajari Lebih Lanjut</button>
+            </div>
+        </div>
+
+        <!-- Statistics Cards -->
+        <div class="row mb-4">
+            <div class="col-md-4">
+                <div class="card stat-card bg-gradient-1 text-white mb-3">
+                    <div class="card-body">
+                        <h5 class="card-title"><i class="fas fa-users"></i> Total Karyawan</h5>
+                        <h2 class="card-text">150</h2>
+                        <p>Active Employees</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card stat-card bg-gradient-2 text-white mb-3">
+                    <div class="card-title"><i class="fas fa-sitemap"></i> Total Jabatan</h5>
+                        <h2 class="card-text">12</h2>
+                        <p>Different Positions</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card stat-card bg-gradient-3 text-white mb-3">
+                    <div class="card-body">
+                        <h5 class="card-title"><i class="fas fa-chart-pie"></i> Total Divisi</h5>
+                        <h2 class="card-text">8</h2>
+                        <p>Active Divisions</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Team Preview -->
+        <section class="mb-5">
+            <h2 class="text-center mb-4">Tim Kami</h2>
+            <div class="row">
+                <!-- Data Karyawan Preview -->
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-header bg-primary text-white">
+                            <h5 class="mb-0">Data Karyawan</h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="team-member">
+                                <img src="img/furina.png" alt="Team Lead">
+                                <h5>Furina</h5>
+                                <p>Senior Manager</p>
+                            </div>
+                            <ul class="list-group">
+                                <li class="list-group-item">Hu Tao - HR Manager</li>
+                                <li class="list-group-item">Elaina - Tech Lead</li>
+                                <li class="list-group-item">Kawaragi Senju - Marketing Head</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Data Jabatan Preview -->
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-header bg-success text-white">
+                            <h5 class="mb-0">Data Jabatan</h5>
+                        </div>
+                        <div class="card-body">
+                            <ul class="list-group">
+                                <li class="list-group-item">CEO</li>
+                                <li class="list-group-item">CTO</li>
+                                <li class="list-group-item">Project Manager</li>
+                                <li class="list-group-item">Senior Developer</li>
+                                <li class="list-group-item">HR Manager</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Data Divisi Preview -->
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-header bg-info text-white">
+                            <h5 class="mb-0">Data Divisi</h5>
+                        </div>
+                        <div class="card-body">
+                            <ul class="list-group">
+                                <li class="list-group-item">Human Resources</li>
+                                <li class="list-group-item">Information Technology</li>
+                                <li class="list-group-item">Marketing</li>
+                                <li class="list-group-item">Finance</li>
+                                <li class="list-group-item">Operations</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quick Access Section -->
+        <div class="quick-access">
+            <h3 class="text-center mb-4">Akses Cepat</h3>
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="d-grid">
+                        <button class="btn btn-primary mb-2">
+                            <i class="fas fa-plus-circle"></i> Tambah Karyawan
+                        </button>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="d-grid">
+                        <button class="btn btn-success mb-2">
+                            <i class="fas fa-chart-line"></i> Laporan Kinerja
+                        </button>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="d-grid">
+                        <button class="btn btn-info mb-2">
+                            <i class="fas fa-calendar-alt"></i> Jadwal Kerja
+                        </button>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="d-grid">
+                        <button class="btn btn-warning mb-2">
+                            <i class="fas fa-cog"></i> Pengaturan
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>Tentang Kami</h5>
+                    <p>Sistem Informasi Manajemen Karyawan yang membantu pengelolaan SDM perusahaan Anda.</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white">Kebijakan Privasi</a></li>
+                        <li><a href="#" class="text-white">Syarat dan Ketentuan</a></li>
+                        <li><a href="#" class="text-white">Bantuan</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Kontak</h5>
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-envelope"></i> ekopurwadi688@gmail.com</li>
+                        <li><i class="fas fa-phone"></i> +62 895 6157 25640</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Tangerang, Indonesia</li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="mt-4">
+            <div class="text-center">
+                <p>&copy; 2024 SIM Karyawan 05TPLP003. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script>
+        // Add animations and interactivity
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add hover effects to cards
+            const cards = document.querySelectorAll('.card');
+            cards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-5px)';
+                    this.style.transition = 'transform 0.3s ease';
+                });
+                card.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0)';
+                });
+            });
+        });
+    </script>
+</body>
+</html>
